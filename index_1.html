@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Link Button</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #111827;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .responsive-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            position: relative;
+            width: clamp(200px, 80vw, 400px);
+            font-size: clamp(1.2rem, 5vw, 2rem);
+            padding: 1.5em 1em;
+            font-weight: 700;
+            color: #ffffff;
+            background: linear-gradient(90deg, #FF416C 0%, #FF4B2B 100%);
+            border-radius: 999px;
+            box-shadow: 0 10px 30px rgba(255, 65, 108, 0.4);
+            transition: transform 0.1s, box-shadow 0.2s;
+            user-select: none;
+        }
+
+        @media (hover: hover) {
+            .responsive-btn:hover {
+                transform: scale(1.05);
+                box-shadow: 0 15px 40px rgba(255, 65, 108, 0.6);
+            }
+        }
+
+        .responsive-btn:active {
+            transform: scale(0.95);
+            background: linear-gradient(90deg, #e63a60 0%, #e64326 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://www.google.com" class="responsive-btn" target="_blank">
+            CLICK HERE
+        </a>
+    </div>
+</body>
+</html>
